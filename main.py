@@ -1,6 +1,37 @@
+import random
+
 MAX_NUMBER_LINES = 3 # max number of slot lines to bet on
 MIN_BET = 1          # min bet amount to place on each line
 MAX_BET = 10000      # max bet amount to place on each line
+
+ROWS = 3
+COLS = 3
+
+# Dictionary to hold all possible symbols
+symbols = {
+    'A': 2,
+    'B': 6,
+    'C': 4,
+    'D': 8
+}
+
+def get_machine_spin(rows, cols, symbols):
+    # add all symbols to a list
+    all_symbols = []
+    for symbol, symbol_count in symbols.items():
+        for _ in range(symbol_count):
+            all_symbols.append(symbol)
+
+    columns = []
+    for _ in range(column):
+        column = []
+        current_symbols = all_symbols[:] # creates a copy of all_symbols
+        for _ in range(rows):
+            value = random.choice(current_symbols)
+            current_symbols.remove(value)
+            column.append(value)
+            
+    columns.append(column)
 
 
 # user enters $ deposit
